@@ -1,6 +1,6 @@
 <div class="container">
   <div class="souvenirs-list pt-3">
-    <% @souvenirs.order('created_at ASC').each do |souvenir| %>
+    <% @souvenirs.order('created_at DESC').each do |souvenir| %>
       <% @souvenir = souvenir %>
       <%= render 'shared/souvenir-card' %>
     <% end %>
