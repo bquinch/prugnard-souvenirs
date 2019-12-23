@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="souvenirs-list">
+    <% @souvenirs.each do |x| %>
+      <div class="souvenir-card mt-3 bg-white">
+        <div class="souvenir-card__top">
+          <% if souvenir.photo.attached? %>
+            <%= cl_image_tag souvenir.photos.first.key, class: 'index-souvenir-card__top__photo' %>
+          <% else %>
+            <%= image_tag 'https://www.outokummunseutu.fi/components/com_easyblog/themes/wireframe/images/placeholder-image.png', class: 'index-souvenir-card__top__photo', alt: 'no-image-attached-to-souvenir' %>
+          <% end %>
+        </div>
+        <div class="souvenir-card__bottom">
+          <div class="souvenir-card__title">
+            <%= souvenir.title.truncate(30) %>
+          </div>
+          <div class="souvenir-card__description">
+            <%= souvenir.description.truncate(200) %>
+          </div>
+          <div class="souvenir-card__location d-flex align-items-center">
+            <i class="fas fa-map-marker-alt"></i><%= souvenir.location %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
