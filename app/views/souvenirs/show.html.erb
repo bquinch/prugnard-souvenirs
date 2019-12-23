@@ -14,11 +14,11 @@
         <div class="souvenir-card__description">
           <%= @souvenir.description.capitalize %>
         </div>
+        <div class="souvenir-card__auteur">
+          <p>Souvenir fait par <strong><%= @souvenir.user.first_name.capitalize %></strong></p>
+        </div>
         <div class="souvenir-card__location d-flex align-items-center">
           <i class="fas fa-map-marker-alt"></i><%= @souvenir.location.capitalize %>
-        </div>
-        <div class="souvenir-card__description">
-          <p>Souvenir fait par <strong><%= @souvenir.user.first_name.capitalize %></strong></p>
         </div>
       </div>
     </div>

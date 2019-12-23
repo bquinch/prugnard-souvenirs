@@ -64,10 +64,19 @@
   border-radius: 2px
 }
 
+.souvenir-card__description {
+  padding-bottom: 1rem;
+}
+
 .souvenir-card__description,
-.souvenir-card__location {
+.souvenir-card__location,
+.souvenir-card__auteur {
   color: #666666;
   font-size: 0.9rem;
+}
+
+.souvenir-card__location {
+  justify-content: flex-end;
 }
 
 .souvenir-card__location i{
