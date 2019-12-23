@@ -1,6 +1,6 @@
 class SouvenirsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_souvenir, only: %I[show edit]
+  before_action :set_souvenir, only: %I[show edit update]
   def index
     @souvenirs = Souvenir.all
   end
@@ -13,7 +13,7 @@ class SouvenirsController < ApplicationController
   end
 
   def create
-    @souvenir = Souvenir.find(souvenir_params)
+    @souvenir = Souvenir.new(souvenir_params)
     @user = current_user
     @souvenir.user = @user
     if @souvenir.save
@@ -28,8 +28,7 @@ class SouvenirsController < ApplicationController
   end
 
   def update
-    @souvenir = Souvenir.find(souvenir_params)
-    if @souvenir.update
+    if @souvenir.update(souvenir_params)
       redirect_to souvenir_path(@souvenir)
     else
       render :edit

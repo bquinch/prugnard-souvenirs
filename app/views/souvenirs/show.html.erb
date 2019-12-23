@@ -1,0 +1,25 @@
+<div class="container d-flex justify-content-center">
+  <div class="souvenir-card-big bg-white">
+      <div class="souvenir-card__top">
+        <% if @souvenir.photo.attached? %>
+          <%= cl_image_tag @souvenir.photo.key, class: 'index-souvenir-card__top__photo-big' %>
+        <% else %>
+          <%= image_tag 'https://www.outokummunseutu.fi/components/com_easyblog/themes/wireframe/images/placeholder-image.png', class: 'index-souvenir-card__top__photo', alt: 'no-image-attached-to-souvenir' %>
+        <% end %>
+      </div>
+      <div class="souvenir-card__bottom">
+        <div class="souvenir-card__title">
+          <%= @souvenir.title.capitalize %>
+        </div>
+        <div class="souvenir-card__description">
+          <%= @souvenir.description.capitalize %>
+        </div>
+        <div class="souvenir-card__location d-flex align-items-center">
+          <i class="fas fa-map-marker-alt"></i><%= @souvenir.location.capitalize %>
+        </div>
+        <div class="souvenir-card__description">
+          <p>Souvenir fait par <strong><%= @souvenir.user.first_name.capitalize %></strong></p>
+        </div>
+      </div>
+    </div>
+</div>

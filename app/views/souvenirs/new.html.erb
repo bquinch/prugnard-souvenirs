@@ -1,0 +1,21 @@
+<div class="new-souvenir-container my-3 col-md-6 col-sm-12">
+  <div class="new-souvenir-form-container bg-white p-3 text-center">
+  <h1 class='new-souvenir-container-container__title text-center'>Nouveau Souvenir</h1>
+    <%= simple_form_for @souvenir do |f| %>
+      <div class="form-inputs text-justify">
+        <%= f.input :title, label: "Titre",input_html: { maxlength: 45 } %>
+        <%= f.input :description, label: "Description", input_html: { maxlength: 500 } %>
+        <%= f.input :location, label: "Lieu", input_html: { maxlength: 150 } %>
+      </div>
+      <div class="text-center">
+        <%= f.input :photo, as: :file,
+                    required: true,
+                    input_html: { multiple: false, autocomplete: "your desired picture", class: 'd-none' },
+                    label_html: { class: 'btn-souvenirs-primary'},
+                    label: '📷 Ajouter une photo' %>
+
+        <%= f.submit 'Créer le souvenir', class: 'btn-souvenirs-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>
