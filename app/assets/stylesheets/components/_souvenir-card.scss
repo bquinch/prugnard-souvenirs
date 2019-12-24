@@ -10,19 +10,6 @@
   position: relative;
   flex: 0 0 auto;
   margin: 1rem;
-
-  &.rotation1 {
-    transform: rotate(-3deg);
-  }
-  &.rotation2 {
-    transform: rotate(-1deg);
-  }
-  &.rotation3 {
-    transform: rotate(1deg);
-  }
-  &.rotation4 {
-    transform: rotate(3deg);
-  }
 }
 
 .souvenir-card-big {
@@ -48,7 +35,7 @@
 
 .index-souvenir-card__top__photo-big {
   width: 100%;
-  height: 80%;
+  height: 70vh;
   object-fit: cover;
   border-radius: 2px;
 }
@@ -97,6 +84,13 @@ a:hover {
 @media(max-width: 456px) {
   .souvenir-card-big {
     width: 90vw;
-    margin: 20% auto;
+    margin: 10% auto;
+  }
+
+  .index-souvenir-card__top__photo-big {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 2px;
   }
 }
