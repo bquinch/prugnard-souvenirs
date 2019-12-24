@@ -1,5 +1,5 @@
 <div class="container d-flex justify-content-center">
-  <div class="souvenir-card-big bg-white">
+  <div class="souvenir-card-big bg-white animated rotateInUpRight ">
       <div class="souvenir-card__top">
         <% if @souvenir.photo.attached? %>
           <%= cl_image_tag @souvenir.photo.key, class: 'index-souvenir-card__top__photo-big' %>
@@ -15,7 +15,7 @@
           <%= @souvenir.description.capitalize %>
         </div>
         <div class="souvenir-card__auteur">
-          <p>Souvenir fait par <strong><%= @souvenir.user.first_name.capitalize %></strong></p>
+          <p>Souvenir fait par <strong><%= @souvenir.user.first_name.capitalize %></strong> <br>le <%= I18n.l(@souvenir.created_at, format: :long, locale: :'fr')  %></p>
         </div>
         <div class="souvenir-card__location d-flex align-items-center">
           <i class="fas fa-map-marker-alt"></i><%= @souvenir.location.capitalize %>

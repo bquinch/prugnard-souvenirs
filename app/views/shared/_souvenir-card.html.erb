@@ -1,5 +1,5 @@
 <%= link_to souvenir_path(@souvenir) do %>
-  <div class="souvenir-card bg-white rotation<%= rand(1..4) %>">
+  <div class="souvenir-card animated rotateInUp<%= ['Left', 'Right'].sample %> bg-white rotation<%= rand(1..4) %>">
     <div class="souvenir-card__top">
       <% if @souvenir.photo.attached? %>
         <%= cl_image_tag @souvenir.photo.key, class: 'index-souvenir-card__top__photo' %>

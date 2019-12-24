@@ -12,5 +12,21 @@
 }
 
 .nav-link {
-  color: white !important;
+  color: #DDDDDD !important;
+}
+
+.fa-camera-retro {
+  color: #DDDDDD;
+}
+
+.navbar-toggler {
+  color: #DDDDDD !important;
+  border-color: #DDDDDD !important;
+  &:focus {
+    outline: none !important;
+  }
+
+  .fa-camera-retro {
+    font-size: 1.7rem;
+  }
 }

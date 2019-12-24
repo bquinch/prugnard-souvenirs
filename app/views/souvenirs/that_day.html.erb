@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="date-today text-center">Souvenirs du <%= Date.today.day %> <%= I18n.t("date.month_names")[Date.today.month] %></h1>
+  <div class=" animated fadeInUp souvenirs-list pt-3">
+    <% @souvenirs.order('created_at DESC').each do |souvenir| %>
+      <% @souvenir = souvenir %>
+      <%= render 'shared/souvenir-card' %>
+    <% end %>
+    <% if @souvenirs.empty? %>
+      <h2 class="ce-jour-la-aucun text-center">Aucun souvenir à cette date, c'est le moment d'en faire de nouveaux !</h2>
+    <% end %>
+  </div>
+</div>

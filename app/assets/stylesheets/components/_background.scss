@@ -4,3 +4,10 @@
   background-repeat: no-repeat;
   overflow: scroll;
 }
+
+@media(max-width: 456px) {
+  .souvenirs-background {
+    height: calc(100vh - 54px);
+    background-position: right;
+  }
+}

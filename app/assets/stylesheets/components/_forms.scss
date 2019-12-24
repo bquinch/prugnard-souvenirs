@@ -3,8 +3,26 @@
   margin: 100px auto;
   border-radius: 10px;
   border: 1px solid #CCCCCC;
+
+  .form-title {
+    font-size: 1.4rem;
+    color: #1A6FA9;
+  }
+
+  label {
+    color: #555555;
+  }
 }
 
 .new-souvenir-container {
   margin: 0px auto;
+
+  label {
+    color: #555555;
+  }
+}
+
+.new-souvenir-container-container__title {
+  font-size: 1.4rem;
+  color: #1A6FA9;
 }

@@ -1,8 +1,12 @@
 class SouvenirsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :that_day]
   before_action :set_souvenir, only: %I[show edit update]
   def index
     @souvenirs = Souvenir.all
+  end
+
+  def that_day
+    @souvenirs = Souvenir.where('extract(day from created_at) = ?', Date.today.day).where('extract(month from created_at) = ?', Date.today.month)
   end
 
   def show

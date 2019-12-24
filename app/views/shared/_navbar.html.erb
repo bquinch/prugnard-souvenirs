@@ -1,12 +1,18 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon justify-content-center">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-camera-retro"></i>
       </button>
   <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Souvenirs", root_url, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Ce jour là", ce_jour_la_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Nouveau", new_souvenir_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <% if current_user.photo.attached? %>
@@ -18,18 +24,18 @@
             <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
-        <li class="nav-item active">
-          <%= link_to "Nouveau", new_souvenir_path, class: "nav-link" %>
-        </li>
       <% else %>
         <li class="nav-item active">
           <%= link_to "Souvenirs", root_url, class: "nav-link" %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Se connecter", new_user_session_path, class: "nav-link" %>
+        <li class="nav-item active">
+          <%= link_to "Ce jour là", ce_jour_la_path, class: "nav-link" %>
         </li>
         <li class="nav-item active">
           <%= link_to "Nouveau", new_souvenir_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Se connecter", new_user_session_path, class: "nav-link" %>
         </li>
       <% end %>
     </ul>
