@@ -1,2 +1,4 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
-# prugnard-souvenirs
+Site internet / application fait pour ma soeur.
+
+Il permet de tout simplement stocker des souvenirs pour les revoir plus tard.
+Fait avec amour pour Noël
