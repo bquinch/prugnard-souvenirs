@@ -1,6 +1,6 @@
 class SouvenirsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show, :that_day]
-  before_action :set_souvenir, only: %I[show edit update]
+  before_action :set_souvenir, only: %I[show edit update destroy]
   def index
     @souvenirs = Souvenir.all
   end
@@ -37,6 +37,11 @@ class SouvenirsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @souvenir.destroy
+    redirect_to root_url, notice: 'Souvenir supprimé'
   end
 
   private

@@ -20,6 +20,18 @@
         <div class="souvenir-card__location d-flex align-items-center">
           <i class="fas fa-map-marker-alt"></i><%= @souvenir.location.capitalize %>
         </div>
+        <div class="souvenir-card__description">
+          <% if @souvenir.user == current_user %>
+            <div class="modif-suppr d-flex">
+              <%= link_to edit_souvenir_path do %>
+                <i class="far fa-edit pr-2"></i>
+              <% end %>
+              <%= link_to souvenir_path(@souvenir), data: { confirm: 'Êtes-vous sûr de supprimer ce souvenir ?' }, method: :delete do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
 </div>
