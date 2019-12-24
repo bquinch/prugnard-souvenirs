@@ -38,6 +38,19 @@
   height: 70vh;
   object-fit: cover;
   border-radius: 2px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    cursor: zoom-in;
+  }
+
+  &.active {
+    height: 90%;
+
+    &:hover {
+      cursor: zoom-out;
+    }
+  }
 }
 
 .souvenir-card__title {
