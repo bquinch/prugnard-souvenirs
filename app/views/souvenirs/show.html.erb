@@ -12,7 +12,7 @@
           <%= @souvenir.title.capitalize %>
         </div>
         <div class="souvenir-card__description">
-          <%= @souvenir.description.capitalize %>
+          <%= @souvenir.description %>
         </div>
         <div class="souvenir-card__auteur">
           <p>Souvenir fait par <strong><%= @souvenir.user.first_name.capitalize %></strong> <br>le <%= I18n.l(@souvenir.created_at, format: :long, locale: :'fr')  %></p>

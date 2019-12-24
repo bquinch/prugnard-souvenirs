@@ -12,7 +12,7 @@
         <%= @souvenir.title.capitalize.truncate(30) %>
       </div>
       <div class="souvenir-card__description">
-        <%= @souvenir.description.capitalize.truncate(200) %>
+        <%= @souvenir.description.truncate(200) %>
       </div>
       <div class="souvenir-card__location d-flex align-items-center">
         <i class="fas fa-map-marker-alt"></i><%= @souvenir.location.capitalize %>
