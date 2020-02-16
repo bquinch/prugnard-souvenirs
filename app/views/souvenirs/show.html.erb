@@ -2,7 +2,7 @@
   <div class="souvenir-card-big bg-white animated rotateInUpRight ">
       <div class="souvenir-card__top">
         <% if @souvenir.photo.attached? %>
-          <%= cl_image_tag @souvenir.photo.key, class: 'index-souvenir-card__top__photo-big', quality: 'auto:eco', fetch_format: :auto, gravity: :auto, width: 1000 %>
+          <%= cl_image_tag @souvenir.photo.key, class: 'index-souvenir-card__top__photo-big', quality: 'auto:eco', fetch_format: :auto, gravity: :auto, width: 1000, angle: :exif %>
         <% else %>
           <%= image_tag 'https://www.outokummunseutu.fi/components/com_easyblog/themes/wireframe/images/placeholder-image.png', class: 'index-souvenir-card__top__photo', alt: 'no-image-attached-to-souvenir' %>
         <% end %>
