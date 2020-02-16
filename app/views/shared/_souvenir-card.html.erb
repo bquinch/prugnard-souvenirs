@@ -15,7 +15,7 @@
         <%= @souvenir.description.truncate(200) %>
       </div>
       <div class="souvenir-card__location d-flex align-items-center">
-        <i class="fas fa-map-marker-alt"></i><%= @souvenir.location.capitalize %>
+        <i class="fas fa-map-marker-alt"></i><%= @souvenir.location[0].upcase %><%= @souvenir.location[1..-1] %>
       </div>
     </div>
   </div>
